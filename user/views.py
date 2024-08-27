@@ -3,5 +3,8 @@ from . import forms
 
 
 def login(request):
-    form = forms.LoginForm()
-    return render(request, 'user/login.html', {"form": form})
+    return render(request, 'user/login.html', {"form": forms.LoginForm()})
+
+
+def new_post(request):
+    return render(request, 'user/new_post.html', {'form': forms.NewPostForm()})

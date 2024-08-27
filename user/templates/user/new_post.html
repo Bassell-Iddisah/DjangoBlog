@@ -1,0 +1,8 @@
+{% extends 'user/layout.html' %}
+{% block content %}
+    <form action="{% url 'user:new_post' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button>Publish</button>
+    </form>
+{% endblock content %}
